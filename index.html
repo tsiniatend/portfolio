@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+  <div class="homeHolder" id="Home">
+    <div class="navbar">
+      <div class="greeting">
+        <p>Hello!</p>
+      </div>
+      
+      <div class="navPages">
+        <a href="index.html">Home</a>
+        <a href="code.html">RoadtoCoding</a>
+        <a href="pd.html">RoadtoPD</a>
+<!--         <a href="#Home">About Us</a> -->
+      </div>
+      <p id="copy">tendalkachew@r2hstudent.org  919-559-2928</p>
+      <a href="#" id="contact" onclick="copyEvent('copy')">Contact</a>
+    </div>
+    <!--  main container for the whole page    -->
+    <div class="mainContainer">
+
+      <!--  set up area for the text  -->
+      <div class="mainText">
+
+        <!--  actual text   -->
+        <div class="details">
+          <h4>Tsiniate Endalkachew</h4>
+          <!--  span insert input puts in our desription effect   -->
+          <h1>I'm a <br> <span class="input"></span></h1>
+          <p>Also Song Writer, Manga Lover, and<br> Christian! </p>
+          <!--  button for cv <a href="images/Portfolio.pdf" class="button" download><i class="fa fa-download"></i>Download CV</a> -->
+          <a href="cv.pdf" class="btn" download><i class="fa fa-download">DOWNLOAD CV</a>
+
+          <!--  ssocial links  <a href="YourLink" target="_blank">YourText</a> https://www.instagram.com/roadtohire/?hl=en-->
+          <div class="socialLinks">
+            <a href="https://www.instagram.com/roadtohire/?hl=en" target="_blank"><i class="uil uil-instagram"></i></a>
+            <a href="https://twitter.com/RoadtoHire?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+            <a href="https://github.com/tsiniatend/java6" target="_blank"><i class="uil uil-github"></i></a>
+          </div>
+        </div>
+        <div class="img">
+          <img src="main.png" alt="">
+        </div>
+
+      </div>
+    </div>
+</body>
+<Script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<Script>
+  var typed = new Typed(".input", {
+    strings: ["learner", "designer.", "creative.", "new hire?"],
+    typespeed: 40,
+    backSpeed: 380,
+    loop: true
+  })
+  function copyEvent(id)
+    {
+        var str = document.getElementById(id);
+        window.getSelection().selectAllChildren(str);
+        document.execCommand("Copy")
+    }
+</script>
+
+</html>

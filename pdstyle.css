@@ -1,0 +1,291 @@
+
+
+*{margin: auto;
+  padding: 0; 
+  
+}
+body {
+
+	font-family: 'Roboto Condensed', sans-serif;
+   background: url("R2Hback.png");
+  
+  
+}
+.navbar{
+    width: auto;
+    padding: 30px 7% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    color: #fff;
+}
+
+/* the text in top left  */
+.navbar .logo p{
+    font-size: 25px;
+}
+
+/* social links  */
+.navbar .navPages a{
+    text-decoration: none;
+    margin: 0 15px;
+    color: #fff;
+    font-size: 26px;
+    transition: all .5s ease;
+}
+/* color hover for nav bar */
+.navbar .navPages a:hover{
+    color: #f39c12;
+}
+
+/* contact box shape change to road2hire colors  */
+#contact{
+    padding: 9px 25px;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* #contact{
+    padding: 9px 25px;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+.navbar{
+    width: auto;
+    padding: 30px 7% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    color: #fff;
+}
+.navbar .logo p{
+    font-size: 25px;
+}
+.navbar .nav_links a{
+    text-decoration: none;
+    margin: 0 15px;
+    color: black;
+    font-size: 30px;
+    transition: all .5s ease;
+}
+.navbar .nav_links a:hover{
+    color: #f39c12;
+} */
+.sr{
+ 
+  width: 400px;
+  height: 400px;
+
+  border:10px solid black;
+  padding: 2rem 1rem;
+  
+  resize: both;
+  background: #f39c12;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
+
+}
+
+
+h1 {
+	 	  
+	color:#333;
+	font-weight:700;
+	margin-top:125px;	 
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:4px;
+	line-height:23px;
+  opacity: 0;
+}
+
+/* --- the timeline holder --- */
+
+.process-wrapper {
+	margin:auto;
+	max-width: auto;
+  
+}
+/* USE # for selective ID edits*/
+#progress-bar-container {
+	position:relative;
+	width:90%;
+	margin:auto;
+	height:100px;
+	margin-top:65px;
+}
+
+ #progress-bar-container ul {
+	padding:0;
+	margin:0;
+	padding-top:15px;
+	z-index:9999;
+	position:absolute;
+	width:100%;
+	margin-top:-40px
+}
+
+/*The content property is used with the ::before and ::after pseudo-elements, to insert generated content 3030 BOrder radius wid and heigh to make sizing .*/
+#progress-bar-container li:before {
+	content:" ";
+	display:block;
+	margin:auto;
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border:solid 2px #aaa;
+	transition:all ease 0.3s;
+     
+}
+
+ /*Makes hover effect on each bullet .*/
+#progress-bar-container li.active:before, #progress-bar-container li:hover:before {
+	border:solid 2px #fff;
+       	 
+	background: linear-gradient(to right, #f39c12 0%,#168a95 100%); 
+}
+/*Float it to left and align it to center,  uppercase it to make it pronounced as well as call transitoning,   make relative.*/
+ #progress-bar-container li {
+	list-style:none;
+	float:left;
+	width:20%;
+	text-align:center;
+	color:#aaa;
+	text-transform:uppercase;
+	font-size:25px;
+	cursor: pointer;
+	font-weight: 700;
+	transition: all ease 0.3s;
+	vertical-align: bottom;
+	height: 60px;
+	position: relative;
+}
+/*every step through the timeline,*/
+#progress-bar-container li .step-inner {
+	position:absolute;
+	width:100%;
+	bottom:0;
+    font-size: 14px;
+}
+
+#progress-bar-container li.active, #progress-bar-container li:hover {
+	color:#444;
+}
+
+/*mirriroed ciricle point in timeline, block in place*/
+#progress-bar-container li:after {
+	content:" ";
+	display:block;
+	width:6px;
+	height:6px;
+	background:#777;
+	margin:auto;
+	border:solid 7px #fff;
+	border-radius:50%;
+	margin-top:40px;
+	box-shadow:0 2px 13px -1px rgba(0,0,0,0.3);
+	transition:all ease 0.2s;
+     
+}
+/*The ::after selector inserts something after the content of each selected element(s).*/ 
+#progress-bar-container li:hover:after {
+	background: #f39c12;
+}
+/*active CSS pseudo-class represents an element (such as a button) that is being activated*/
+#progress-bar-container li.active:after {
+	background:#207893;
+}
+/*create actual timeline dash, */
+#progress-bar-container #line {
+	width:80%;
+	margin:auto;
+	background: #f39c12;
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:57px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+ 
+ #progress-bar-container #line-progress {
+	content:" ";
+	width:3%;
+	height:100%;
+	background: #207893;	 
+	background: linear-gradient(to right, #207893 0%,#2ea3b7 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+/* INFO DUMP EDIT*/
+
+/*set the area for text dump */
+#progress-content-section {
+	width:90%;
+	margin: auto;
+	background: #f3f3f3;
+	border-radius: 4px;
+}
+/* lets position the text infodump  */
+#progress-content-section .section-content {
+	padding:30px 40px;
+	text-align:center;
+}
+/* title edits  */
+#progress-content-section .section-content h2 {
+	font-size:17px;
+	text-transform:uppercase;
+	color:#333;
+	letter-spacing:1px;
+}
+/* text edits */
+#progress-content-section .section-content p {
+	font-size:16px;
+	line-height:1.8em;
+	color:#777;
+}
+/* AFM: property sets how a CSS animation applies styles to its target before and after its execution. 
+FadeInUp: we are rising up the articles from bottom just display them as none called at bottom
+*/
+#progress-content-section .section-content {
+	display:none;
+	animation: FadeInUp 999ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
+}
+/* :active selector is used to select and style the active link.  
+block means that the element is displayed as a block, as paragraphs and headers have always been*/
+#progress-content-section .section-content.active {
+	display:block;
+}
+/*   call keyframes animation for the fadeinup 
+ 0% is the beginning of the animation, 100% is when the animation is complete
+use opacity to make it visibile 
+
+*/
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+} 
+
+ 
+   
+  

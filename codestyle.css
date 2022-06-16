@@ -1,0 +1,175 @@
+
+body{
+font-family: sans-serif;
+margin: 0;
+padding: 0;
+line-height: 1.5;
+font-weight: 400;
+color: white;
+background-color: #f39c12;
+background-image: linear-gradient(315deg , #4c4199 0%, #207893 74%);
+  overflow-x: hidden;
+}
+
+.navbar{
+    width: auto;
+    padding: 30px 7% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    color: #fff;
+}
+
+/* the text in top left  */
+.navbar .logo p{
+    font-size: 25px;
+}
+
+/* social links  */
+.navbar .navPages a{
+    text-decoration: none;
+    margin: 0 15px;
+    color: #fff;
+    font-size: 26px;
+    transition: all .5s ease;
+}
+/* color hover for nav bar */
+.navbar .navPages a:hover{
+    color: #f39c12;
+}
+
+/* contact box shape change to road2hire colors  */
+#contact{
+    padding: 9px 25px;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+ /*set the area for the time line to be contained, boxes up page  */
+.timeContainer{
+padding: 2rem;
+padding-bottom: 400px;
+margin:  0 auto;
+max-width: 800px;
+}
+
+/* set up the title area */
+
+.introArea{
+text-align: center;
+padding: 4rem 0;
+max-width: 600px;
+margin: 0 auto;
+}
+
+
+.timeline{
+position: relative;
+min-height: 150px;
+}
+/* top/botomm and its % allow line to get postioned down ABS positioning for wholepage*/
+.line{
+position: absolute;
+z-index: 2;
+left: calc(50% - 1px);
+width: 3px;
+top:-50px;
+bottom: -50px;
+background-color: #f39c12;
+  display: none;
+}
+/* combo before and after to create allow line to be shown behind at first
+use content again for calling empty 
+*/
+.line:before,
+.line:after{
+  position: absolute;
+  display: block;
+  content: '';
+  height: 1rem; 
+  width: 1rem;   
+  border-radius: 50%;
+  background-color: #000;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+/* allows bottom of line to be seen when scrolling  */
+.line:after{
+  bottom: 0;
+}
+
+/* make text invisible at first than translate it to the side as scrolling down
+relative position towards line 
+editi tranistion and its sizing 999 forver
+*/
+.section{
+display: flex;
+opacity: 0;
+transform: translateX(-100%);
+transition: 999ms ease;
+position: relative;
+z-index: 1;
+margin: 50px 0;
+padding: 1rem;
+border-radius: 1rem;
+align-items: center;
+min-height: 300px;
+  max-width: auto;
+}
+
+/* lets make every tab on the opp side by using odd*/
+.section:nth-child(odd){
+  flex-direction: row-reverse;
+  transform: translateX(100%);
+}
+/* our time line beads every scroll */
+.timePoints{
+  position: absolute;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #207893;
+  left: 50%;
+  top: 20%; 
+  transform: translateX(-50%);
+  }
+ /* puts my text content on the side as scroll down  */
+.content{
+  width: calc(50% - 2rem);
+}
+
+/* BRING whole js effect to life */
+.show-me:nth-child(n){
+  transform: none; 
+  opacity: 1;  
+
+}
+
+.pic{
+  height: 350px;
+  width:  350px;  
+  right: 60px;
+  
+}
+
+.epic{
+
+  max-width: 500px;
+}
+
+.test{
+  right: 250px;
+
+}
+
+@media screen and (max-width: 480px){
+  .epic{
+  max-width: 300px;  
+  } 
+}
